@@ -17,6 +17,8 @@ public class ArangoDBMainTest {
         arangoDB = new ArangoDB.Builder()
                 .host("10.47.3.51")
                 .port(1026)
+                .user("root")
+                .password("")
                 .build();
 
 
@@ -25,7 +27,7 @@ public class ArangoDBMainTest {
     @Test
     public void addRecord() throws Exception {
         System.out.println(" Adding Record");
-        String dbName = "mydb";
+        String dbName = "NewDB";
 
         String collectionName = "firstCollection";
         try {
